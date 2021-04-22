@@ -1,0 +1,11 @@
+Install mongodb using helm
+
+```
+helm install rocketchatdb bitnami/mongodb --set auth.username=admin,auth.password=admin,auth.rootPassword=admin,auth.database=rocketdb
+```
+Create a secret MONGOCONNECTION
+
+```
+kubectl create secret generic mongosecret --from-literal=MONGOCONNECTION="mongodb://admin:admin@rocketchatdb-mongodb.default:27017/rocketdb"
+
+```
