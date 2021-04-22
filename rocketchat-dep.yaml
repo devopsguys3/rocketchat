@@ -23,9 +23,9 @@ spec:
                 secretKeyRef:
                   name: mongosecret # the name of the Kubernetes secret containing the data
                   key: MONGOCONNECTION # the key inside the Kubernetes secret containing the data       
-            - name: MONGO_OPLOG_URL # the application expects to find the MongoDB connection details in this environment variable
-              valueFrom:
-                secretKeyRef:
-                  name: mongosecret # the name of the Kubernetes secret containing the data
-                  key: MONGOCONNECTION # the key inside the Kubernetes secret containing the data                          
-          imagePullPolicy: Always
+#            - name: MONGO_OPLOG_URL # the application expects to find the MongoDB connection details in this environment variable
+#              valueFrom:
+#                secretKeyRef:
+#                  name: mongosecret # the name of the Kubernetes secret containing the data
+#                  key: MONGOCONNECTION # the key inside the Kubernetes secret containing the data                          
+#          imagePullPolicy: Always
